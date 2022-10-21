@@ -10,5 +10,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "cSpell.words": ["tada"]
+  "cSpell.words": ["clsx", "tada"]
 }

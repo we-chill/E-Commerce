@@ -9,11 +9,12 @@ interface BoxIconProps {
   rotate?: '90' | '180' | '270';
   flip?: 'horizontal' | 'vertical';
   pull?: 'left' | 'right';
-  border?: 'default' | 'circle';
 }
 
-const BoxIcon: FC<BoxIconProps> = ({ border, ...props }) => {
-  return <box-icon border={border === 'circle' ? 'circle' : ''} {...props} />;
+const BoxIcon: FC<BoxIconProps> = (props) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return <box-icon {...props} />;
 };
 
 export default BoxIcon;

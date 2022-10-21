@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --cache \"./src/**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint --cache --fix \"./src/**/*.{js,jsx,ts,tsx}\""
+    "lint:fix": "eslint --cache --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -18,17 +20,30 @@
     "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
   },
   "dependencies": {
+    "clsx": "1.2.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "18.8.5",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
     "autoprefixer": "10.4.12",
+    "babel-loader": "^8.2.5",
     "boxicons": "2.1.4",
     "eslint": "8.25.0",
     "eslint-config-prettier": "8.5.0",
