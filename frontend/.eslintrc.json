@@ -1,33 +1,21 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
-    "standard-with-typescript",
-    "prettier"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "overrides": [
-    {
-      "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports"],
-      "extends": [
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "prettier"
-      ],
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      }
-    }
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["react", "unused-imports"],
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint", "unused-imports"],
   "rules": {
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "prettier/prettier": "error",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    // if you use React 17+; otherwise, turn this on
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
@@ -39,5 +27,20 @@
         "argsIgnorePattern": "^_"
       }
     ]
-  }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "ignorePatterns": ["node_modules", "build", "dist", "public"]
 }

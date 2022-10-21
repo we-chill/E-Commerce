@@ -13,10 +13,7 @@ interface BoxIconProps {
 }
 
 const BoxIcon: FC<BoxIconProps> = ({ border, ...props }) => {
-  return (
-    // @ts-expect-error
-    <box-icon border={border === 'circle' ? 'circle' : ''} {...props} />
-  );
+  return <box-icon border={border === 'circle' ? 'circle' : ''} {...props} />;
 };
 
 export default BoxIcon;

@@ -12,10 +12,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <>
       <Navbar />
       <main>{children}</main>
-      <Script
-        src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
-        strategy="lazyOnload"
-      />
+      <Script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" strategy="lazyOnload" />
     </>
   );
 };
