@@ -9,5 +9,6 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": ["tada"]
 }
