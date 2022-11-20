@@ -1,0 +1,9 @@
+django>=4.0.0,<4.1.0
+djangorestframework
+pyyaml
+requests
+django-cors-headers
+psycopg2
+Pillow
+django-phonenumber-field[phonenumberslite]
+djangorestframework-simplejwt
