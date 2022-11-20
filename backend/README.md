@@ -1,19 +1,18 @@
-# Basic AI Solver for Water Sort Puzzles
-This is my assignment in the "E-Commerce" subject at the College.
-
-The project is about building an AI solver for the game called WATER SORT PUZZLE using python programming laguage.
-# Algorithm used
-- Breadth first search (BFS).
-- A Star (A*).
 # Language used 
-PYTHON.
+Python 3.10.0
 # Package used
-- pygame
-# How to run
-Run the script "main.py" by typing.
+- all necessary packages are listed in requirements.txt
+# Installation
+Create a virtual environment to isolate our package dependencies locally
 ```
-python main.py
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
 ```
-- If you cannot run the project, check for the python version (3.9.0 or more) and check whether you installed all necessary packages mentioned above.
-# Contact
-- Contact me via email : thai.trantvt030101@hcmut.edu.vn
+Install all necessary packages
+```
+python3 -m pip install -r requirements.txt
+```
+# Running
+```
+python3 manage.py runserver
+```
