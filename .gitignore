@@ -1,28 +1,175 @@
-.DS_Store
-frontend/
-backend/venv/
-backend/py_client/
-# Created by https://www.toptal.com/developers/gitignore/api/macos,node,react,nextjs,yarn
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,node,react,nextjs,yarn
+# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,pythonvanilla,django,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,python,pythonvanilla,django,windows
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
 
-# Local History for Visual Studio Code
-.history/
+# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
+# in your Git repository. Update and uncomment the following line accordingly.
+# <django-project-name>/staticfiles/
 
-# Built Visual Studio Code Extensions
-*.vsix
+### Django.Python Stack ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+
+# Django stuff:
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
 
 ### macOS ###
 # General
@@ -32,7 +179,6 @@ backend/py_client/
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -57,200 +203,161 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### NextJS ###
-# Dependencies
-/node_modules
-/.pnp
-.pnp.js
+### Python ###
+# Byte-compiled / optimized / DLL files
 
-# Testing
-/coverage
+# C extensions
 
-# Next.js
-/.next/
-/out/
+# Distribution / packaging
 
-# Production
-/build
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 
-# Misc
-*.pem
+# Installer logs
 
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# Unit test / coverage reports
 
-# Local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Translations
 
-# Vercel
-.vercel
+# Django stuff:
 
-### Node ###
-# Logs
-logs
-*.log
-lerna-debug.log*
+# Flask stuff:
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Scrapy stuff:
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# Sphinx documentation
 
-# Directory for instrumented libs generated by jscoverage/JSCover
-lib-cov
+# PyBuilder
 
-# Coverage directory used by tools like istanbul
-coverage
-*.lcov
+# Jupyter Notebook
 
-# nyc test coverage
-.nyc_output
+# IPython
 
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
-# Bower dependency directory (https://bower.io/)
-bower_components
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
 
-# node-waf configuration
-.lock-wscript
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
 
-# Dependency directories
-node_modules/
-jspm_packages/
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 
-# Snowpack dependency directory (https://snowpack.dev/)
-web_modules/
+# Celery stuff
 
-# TypeScript cache
-*.tsbuildinfo
+# SageMath parsed files
 
-# Optional npm cache directory
-.npm
+# Environments
 
-# Optional eslint cache
-.eslintcache
+# Spyder project settings
 
-# Optional stylelint cache
-.stylelintcache
+# Rope project settings
 
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
+# mkdocs documentation
 
-# Optional REPL history
-.node_repl_history
+# mypy
 
-# Output of 'npm pack'
-*.tgz
+# Pyre type checker
 
-# Yarn Integrity file
-.yarn-integrity
+# pytype static type analyzer
 
-# dotenv environment variable files
-.env
+# Cython debug symbols
 
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 
-# Next.js build output
-.next
-out
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
 
-# Nuxt.js build / generate output
-.nuxt
-dist
+### PythonVanilla ###
+# Byte-compiled / optimized / DLL files
 
-# Gatsby files
-.cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
+# C extensions
 
-# vuepress build output
-.vuepress/dist
+# Distribution / packaging
 
-# vuepress v2.x temp and cache directory
-.temp
+# Installer logs
 
-# Docusaurus cache and generated files
-.docusaurus
+# Unit test / coverage reports
 
-# Serverless directories
-.serverless/
+# Translations
 
-# FuseBox cache
-.fusebox/
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
 
-# DynamoDB Local files
-.dynamodb/
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
 
-# TernJS port file
-.tern-port
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
 
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.pnp.*
+# Local History for Visual Studio Code
+.history/
 
-### Node Patch ###
-# Serverless Webpack directories
-.webpack/
+# Built Visual Studio Code Extensions
+*.vsix
 
-# Optional stylelint cache
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
 
-# SvelteKit build / generate output
-.svelte-kit
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-### react ###
-.DS_*
-**/*.backup.*
-**/*.back.*
+# Dump file
+*.stackdump
 
-node_modules
+# Folder config file
+[Dd]esktop.ini
 
-*.sublime*
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-psd
-thumb
-sketch
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-### yarn ###
-# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+# Windows shortcuts
+*.lnk
 
-.yarn/*
-!.yarn/releases
-!.yarn/patches
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-
-# if you are NOT using Zero-installs, then:
-# comment the following lines
-!.yarn/cache
-
-# and uncomment the following lines
-# .pnp.*
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,node,react,nextjs,yarn
+# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,pythonvanilla,django,windows
