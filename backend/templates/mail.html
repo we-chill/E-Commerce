@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <br>
+
+        <h2>Thank you for your order, {{ user.username }}!</h2>
+        <h3>Your Order ID: {{ order.id }}</h3>
+
+        <h3>Shipping Details:</h3>
+
+        Date: {{ order.date }} <br/>
+        Address: {{ order.address }} <br/>
+
+        <h3>
+            Contact Details:
+        </h3>
+        Email: {{ user.email }} <br/>
+        Phone: {{ order.mobile }}
+
+        <h2>Order Details:</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.order_items %}
+                    <tr>
+                        <td>{{ item.product }}</td>
+                        <td>{{ item.quantity }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <th>Total Price</th>
+                    <td>{{ order.total_price }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -17,7 +17,6 @@ class ProductSerializer(serializers.ModelSerializer):
             'status',
             'category',
             'get_image',
-            'get_thumbnail',
         ]
 
 

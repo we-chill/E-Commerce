@@ -1,4 +1,8 @@
 from django.http import Http404
+from django.conf import settings
+from django.core.mail import send_mail, EmailMessage
+from django.template import Context
+from django.template.loader import render_to_string, get_template
 
 from rest_framework import status, generics, authentication, permissions
 from rest_framework.views import APIView
@@ -39,8 +43,28 @@ def checkout(request):
     serializer = OrderSerializer(data=request.data)
 
     if serializer.is_valid():
-        # Send Email
         serializer.save(user=request.user)
+        # Sending email
+        ctx = {
+            'user': {
+                'username': request.user.username,
+                'email': request.user.email
+            },
+            'order': serializer.data
+        }
+        message = get_template('mail.html').render(ctx)
+        subject = 'CONFIRMATION ORDER DETAILS FROM CHILL CHILL'
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = [request.user.email, ]
+        msg = EmailMessage(
+            subject,
+            message,
+            email_from,
+            recipient_list,
+        )
+        msg.content_subtype = 'html'
+        msg.send()
+
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

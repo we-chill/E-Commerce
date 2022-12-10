@@ -14,5 +14,6 @@ class ProductInline(admin.TabularInline):
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title',)
     inlines = [ProductInline]
     prepopulated_fields = {"slug": ("title",)}

@@ -53,3 +53,14 @@ class ProductCreate(APIView):
             serializers.save()
             return Response(serializers.data, status=status.HTTP_201_CREATED)
         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CategoryCreate(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request, format=None):
+        serializers = CategorySerializer(data=request.data, many=True)
+        if serializers.is_valid():
+            serializers.save()
+            return Response(serializers.data, status=status.HTTP_201_CREATED)
+        return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
